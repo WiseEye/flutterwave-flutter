@@ -168,7 +168,7 @@ class _CardPaymentState extends State<CardPayment>
                             ),
                             controller: this._cardNumberFieldController,
                             inputFormatters: [
-                              WhitelistingTextInputFormatter.digitsOnly,
+                              FilteringTextInputFormatter.digitsOnly,
                               new CardNumberInputFormatter(),
                               new LengthLimitingTextInputFormatter(19),
                             ],
@@ -258,7 +258,7 @@ class _CardPaymentState extends State<CardPayment>
                                   },
 
                                   inputFormatters: [
-                                    WhitelistingTextInputFormatter.digitsOnly,
+                                    FilteringTextInputFormatter.digitsOnly,
                                     new CardDateInputFormatter(),
                                     new LengthLimitingTextInputFormatter(5),
                                   ],
@@ -343,7 +343,7 @@ class _CardPaymentState extends State<CardPayment>
                                       ),
                                     )),
                                 inputFormatters: [
-                                  WhitelistingTextInputFormatter.digitsOnly,
+                                  FilteringTextInputFormatter.digitsOnly,
                                   LengthLimitingTextInputFormatter(4)
                                 ],
                                 onChanged: (value) {
